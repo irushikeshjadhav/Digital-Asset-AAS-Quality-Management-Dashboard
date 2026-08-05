@@ -27,40 +27,30 @@ The AAS was built first as a **Type 1 AASX package** (AASX Package Explorer) and
 
 ```
 .
+├── README.md
+├── LICENSE
+├── aas-core-submodels-diagram.png     # AAS core + submodel structure
 ├── aasx/
-│   └── QualityManagementDashboard_7027952.aasx     # Type 1 AASX package
-├── aas-full-export.json                             # Whole AAS environment in one file
-├── submodels/
-│   ├── digital-nameplate.json
-│   ├── software-nameplate.json
-│   ├── time-series.json
-│   ├── displayed-kpis.json
-│   └── dashboard-layout.json
-├── concept-descriptions/
-│   └── concept-descriptions.json                    # 81 total: 4 custom OEE + 77 standard IDTA/eCl@ss
-└── docs/
-    ├── aas-core-submodels-diagram.png                # Figure 2 - AAS core + submodel structure
-    ├── interaction-sequence-diagram.png              # Figure 1 - system-integration use case
-    └── screenshots/
-        ├── digital-nameplate.png
-        ├── software-nameplate.png
-        ├── displayed-kpis.png
-        ├── time-series.png
-        ├── dashboard-layout.png
-        └── live-demo-digital-nameplate.png
+│   ├── QualityManagementDashboard_7027952.aasx   # Type 1 AASX package
+│   └── aas-full-export.json                       # Whole AAS environment in one file
+└── submodels/
+    ├── digital-nameplate.json
+    ├── software-nameplate.json
+    ├── time-series.json
+    ├── displayed-kpis.json
+    ├── dashboard-layout.json
+    └── concept-descriptions.json      # 81 total: 4 custom OEE + 77 standard IDTA/eCl@ss
 ```
 
 ---
 
 ## Architecture
 
-<p align="center"><img src="docs/aas-core-submodels-diagram.png" width="700" alt="AAS core and submodels diagram"></p>
+<p align="center"><img src="aas-core-submodels-diagram.png" width="700" alt="AAS core and submodels diagram"></p>
 
 The AAS core references five submodels. `DisplayedKPIs` additionally links out to four custom Concept Descriptions through `semanticId`, so every OEE property carries a formally resolvable meaning rather than relying on a name convention alone.
 
-The primary use case - an external MES or Industrie 4.0 component discovering the dashboard's capabilities and reading live KPIs - follows this interaction sequence:
-
-<p align="center"><img src="docs/interaction-sequence-diagram.png" width="650" alt="Interaction sequence diagram"></p>
+The primary use case - an external MES or Industrie 4.0 component discovering the dashboard's capabilities and reading live KPIs - follows this sequence:
 
 1. `GET /submodels` - discover which submodels exist (the dashboard's capability description)
 2. `GET /submodels/{DisplayedKPIs-id-base64}/submodel-elements` - retrieve current KPI values
@@ -87,13 +77,9 @@ Provides the asset's identity metadata - the entry point for automated asset loo
 | CountryOfOrigin | DE |
 | URIOfTheProduct | `https://hs-emden-leer.de/ids/asset/QualityManagementDashboard_7027952` |
 
-<p align="center"><img src="docs/screenshots/digital-nameplate.png" width="700" alt="Digital Nameplate submodel screenshot"></p>
-
 ### b) Software Nameplate (IDTA 02007)
 
 Adds software-specific metadata, split into a **Type** section (properties shared by the software product in general) and an **Instance** section (deployment-specific details for this running copy): installed version, host, operating system, installation path. Together with the Digital Nameplate, this gives a complete machine-readable identity record for the software asset.
-
-<p align="center"><img src="docs/screenshots/software-nameplate.png" width="700" alt="Software Nameplate submodel screenshot"></p>
 
 ### c) TimeSeries (IDTA 02008)
 
@@ -107,8 +93,6 @@ Stores historical KPI records using the **LinkedSegments** pattern - each machin
 | `InternalSegment` | (reserved for inline records, unused in this instance) | - |
 
 Each segment additionally carries `RecordCount`, `StartTime`/`EndTime`, `Duration`, and `State`, so a consumer can tell how much history is available before querying it. Records themselves follow a long-format schema (`Time`, `MachineId`, `MetricName`, `Value`, `Unit`) - one schema accommodates all three machines without a separate structure per source.
-
-<p align="center"><img src="docs/screenshots/time-series.png" width="700" alt="TimeSeries submodel screenshot"></p>
 
 ### d) DisplayedKPIs (custom)
 
@@ -137,8 +121,6 @@ The IMM's four OEE properties each carry a `semanticId` pointing to one of the f
 
 **QualityAlerts** - `ActiveAlertsCount`, `HighestSeverity`, `LastAlertTimestamp`, `LastAlertMessage`.
 
-<p align="center"><img src="docs/screenshots/displayed-kpis.png" width="700" alt="DisplayedKPIs submodel screenshot"></p>
-
 ### e) DashboardLayout (custom)
 
 Describes the UI configuration a rendering client would use to reconstruct the dashboard: global settings (`Title`, `Description`, `Version`, `Theme`, `RefreshIntervalSeconds`, `DefaultTimeRange`) plus a `Panels` structure grouped into four sections:
@@ -153,13 +135,11 @@ Describes the UI configuration a rendering client would use to reconstruct the d
 
 Each panel names its data source by submodel/collection path, so a rendering client (or a different dashboard technology entirely) knows exactly which AAS element feeds which visual, without hard-coded UI logic.
 
-<p align="center"><img src="docs/screenshots/dashboard-layout.png" width="700" alt="DashboardLayout submodel screenshot"></p>
-
 ---
 
 ## Concept Descriptions
 
-The package carries **81 Concept Descriptions** in total. Seventy-seven are standard, auto-included definitions that ship with the IDTA Digital Nameplate, Software Nameplate, and TimeSeries templates (e.g. `ManufacturerName`, `SerialNumber`, `InstalledOnOS`, `RelativeTimePoint`) - these aren't authored per-project, they come bundled with the templates themselves.
+The package carries **81 Concept Descriptions** in total (`submodels/concept-descriptions.json`). Seventy-seven are standard, auto-included definitions that ship with the IDTA Digital Nameplate, Software Nameplate, and TimeSeries templates (e.g. `ManufacturerName`, `SerialNumber`, `InstalledOnOS`, `RelativeTimePoint`) - these aren't authored per-project, they come bundled with the templates themselves.
 
 The remaining **four are custom**, written specifically for this project to formally ground the OEE pillars using the IEC 61360 data specification template:
 
@@ -182,7 +162,7 @@ This package was built against Hochschule Emden/Leer's Digital Factory, but the 
 
 Any IDTA-compliant Type 2 AAS server can host this package - Eclipse BaSyX, AASX Server, FA³ST, or similar. Two ways in:
 
-- **Fastest:** upload `aas-full-export.json` (or the `.aasx` file in `aasx/`) directly through your server's import/upload endpoint. This restores the entire environment - the AAS, all five submodels, and all concept descriptions - in one step. Most Type 2 servers, BaSyX included, expose a REST endpoint or admin UI for exactly this; check your server's API documentation for the precise call, since the exact path varies by product and version.
+- **Fastest:** upload `aasx/aas-full-export.json` (or the `.aasx` file next to it) directly through your server's import/upload endpoint. This restores the entire environment - the AAS, all five submodels, and all concept descriptions - in one step. Most Type 2 servers, BaSyX included, expose a REST endpoint or admin UI for exactly this; check your server's API documentation for the precise call, since the exact path varies by product and version.
 - **Selective:** load individual files from `submodels/` one at a time if you only need specific capabilities - for example, deploying just `displayed-kpis.json` for a lightweight, KPI-only integration without the nameplate metadata.
 
 ### 2. Re-point the identifier namespace
@@ -244,11 +224,9 @@ Each submodel carries an instance-specific ID under the same namespace, required
 
 ---
 
-## Live Demonstration
+## Demonstration
 
-Type 2 behaviour was validated two ways: directly querying the live BaSyX Submodel Repository REST API, and browsing the deployed shell through the BaSyX AAS UI - confirming real, populated instance data (not an empty template) is served for every submodel.
-
-<p align="center"><img src="docs/screenshots/live-demo-digital-nameplate.png" width="700" alt="Live BaSyX demo showing populated Digital Nameplate data"></p>
+Type 2 behaviour was validated two ways: directly querying the live BaSyX Submodel Repository REST API, and browsing the deployed shell through the BaSyX AAS UI - confirming real, populated instance data (not an empty template) is served for every submodel, including the instance-specific `URIOfTheProduct` on the Digital Nameplate carrying the `_7027952` suffix.
 
 ---
 
