@@ -1,0 +1,1287 @@
+{
+  "idShort": "TimeSeries",
+  "description": [
+    {
+      "language": "de",
+      "text": "Enthält Zeitreihendaten und Referenzen auf Zeitreihendaten, um diese entlang des Asset Lebenszyklus aufzufinden und semantisch zu beschreiben."
+    },
+    {
+      "language": "en",
+      "text": "Contains time series data and references to time series data to discover and semantically describe them along the asset lifecycle."
+    }
+  ],
+  "administration": {
+    "version": "1",
+    "revision": "1"
+  },
+  "id": "https://hs-emden-leer.de/ids/sm/TimeSeries_7027952",
+  "kind": "Instance",
+  "semanticId": {
+    "type": "ModelReference",
+    "keys": [
+      {
+        "type": "Submodel",
+        "value": "https://admin-shell.io/idta/TimeSeries/1/1"
+      }
+    ]
+  },
+  "submodelElements": [
+    {
+      "idShort": "Metadata",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/TimeSeries/Metadata/1/1"
+          }
+        ]
+      },
+      "value": [
+        {
+          "category": "PARAMETER",
+          "idShort": "Name",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Metadata/Name/1/1"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Digital Factory Time Series Data"
+            }
+          ],
+          "modelType": "MultiLanguageProperty"
+        },
+        {
+          "category": "PARAMETER",
+          "idShort": "Description",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Metadata/Description/1/1"
+              }
+            ]
+          },
+          "value": [
+            {
+              "language": "en",
+              "text": "Quality-relevant time series data from the Digital Factory machines (IMM, Laser Engraver, Delta Robot). Data is exchanged in JSON format. Live values are published over MQTT (Mosquitto broker); historical records are stored in TimescaleDB and exposed over a FastAPI REST API. Only quality-related measurements are exposed in this submodel — defect counts, good-part counts, cycle times and completion progress — filtered from each machine's full data stream. Each record holds one measurement: Time, MachineId, MetricName, Value, Unit."
+            }
+          ],
+          "modelType": "MultiLanguageProperty"
+        },
+        {
+          "idShort": "Record",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Record/1/1"
+              }
+            ]
+          },
+          "value": [
+            {
+              "category": "VARIABLE",
+              "idShort": "Time",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/RelativePointInTime/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                      }
+                    ]
+                  },
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "OneToMany"
+                },
+                {
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://admin-shell.io/SubmodelTemplates/AllowedIdShort/1/0"
+                      }
+                    ]
+                  },
+                  "type": "AllowedIdShort",
+                  "valueType": "xs:string",
+                  "value": "Time[\\d{2,3}]"
+                }
+              ],
+              "valueType": "xs:long",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "MachineId",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://sample.com/AccelerationX/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "ZeroToOne"
+                }
+              ],
+              "valueType": "xs:long",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "Value",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://sample.com/AccelerationY/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "ZeroToOne"
+                }
+              ],
+              "valueType": "xs:double",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "Unit",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://sample.com/AccelerationZ/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "ZeroToOne"
+                }
+              ],
+              "valueType": "xs:long",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "MetricName",
+              "valueType": "xs:string",
+              "modelType": "Property"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        }
+      ],
+      "modelType": "SubmodelElementCollection"
+    },
+    {
+      "idShort": "Segments",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/idta/TimeSeries/Segments/1/1"
+          }
+        ]
+      },
+      "value": [
+        {
+          "idShort": "LinkedSegment_IMM",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Segments/LinkedSegment/1/1"
+              }
+            ]
+          },
+          "value": [
+            {
+              "category": "PARAMETER",
+              "idShort": "Name",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Name/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Historical Data-Injection Moulding Machine"
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Description",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Description/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Quality metrics from the IMM: good_parts, bad_parts, parts_remaining, avg_cycle_time_ms, last_cycle_time_ms."
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "RecordCount",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/RecordCount/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:long",
+              "value": "5000",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "StartTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/StartTime/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "EndTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1 "
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "Duration",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "PT24H",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingInterval",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingInterval/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:int",
+              "value": "60",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingRate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingRate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:long",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "State",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/State/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Completed",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "LastUpdate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/LastUpdate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Endpoint",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Endpoint/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "http://digitalfactory.hs-emden-leer.local/api/v1/machines/IMM/metrics",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Query",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Query/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "?from={epoch_ms_start}&to={epoch_ms_end}",
+              "modelType": "Property"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "LinkedSegment_LaserEngraver",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Segments/LinkedSegment/1/1"
+              }
+            ]
+          },
+          "value": [
+            {
+              "category": "PARAMETER",
+              "idShort": "Name",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Name/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Historical Data-Laser Engraver"
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Description",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Description/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Quality metrics from the Laser Engraver: count_finished_card, last_job_duration_s, total_engraving_duration_s, progress."
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "RecordCount",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/RecordCount/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:int",
+              "value": "5000",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "StartTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/StartTime/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "EndTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1 "
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "Duration",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "PT24H",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingInterval",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingInterval/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:int",
+              "value": "60",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingRate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingRate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:long",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "State",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/State/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Completed",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "LastUpdate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/LastUpdate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Endpoint",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Endpoint/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "http://digitalfactory.hs-emden-leer.local/api/v1/machines/Laser/metrics",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Query",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Query/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "?from={epoch_ms_start}&to={epoch_ms_end}",
+              "modelType": "Property"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "LinkedSegment_DeltaRobot",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Segments/LinkedSegment/1/1"
+              }
+            ]
+          },
+          "value": [
+            {
+              "category": "PARAMETER",
+              "idShort": "Name",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Name/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Historical Data-Delta Robot"
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Description",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Description/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Quality metrics from the Delta Robot: successful_picks, failed_picks, cycle_time_ms."
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "RecordCount",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/RecordCount/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:long",
+              "value": "5000",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "StartTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/StartTime/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "EndTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1 "
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "Duration",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "PT24H",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingInterval",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingInterval/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:int",
+              "value": "60",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingRate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingRate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:long",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "State",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/State/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Completed",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "LastUpdate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/LastUpdate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Endpoint",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Endpoint/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "http://digitalfactory.hs-emden-leer.local/api/v1/machines/Robot/metrics",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Query",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Query/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "?from={epoch_ms_start}&to={epoch_ms_end}",
+              "modelType": "Property"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "InternalSegment",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Segments/InternalSegment/1/1"
+              }
+            ]
+          },
+          "value": [
+            {
+              "category": "PARAMETER",
+              "idShort": "Name",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Name/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Embedded Sample Records"
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Description",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Description/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Six static sample records - two quality measurements per machine, embedded as a Type 1 snapshot."
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "RecordCount",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/RecordCount/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:int",
+              "value": "6",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "StartTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/StartTime/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "EndTime",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "Duration",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "PT2H",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingInterval",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingInterval/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:long",
+              "value": "3600",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "SamplingRate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingRate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:long",
+              "modelType": "Property"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "State",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/State/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:string",
+              "value": "Completed",
+              "modelType": "Property"
+            },
+            {
+              "category": "VARIABLE",
+              "idShort": "LastUpdate",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Segment/LastUpdate/1/1"
+                  }
+                ]
+              },
+              "valueType": "xs:date",
+              "value": "2026-05-28",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "Records",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Records/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "idShort": "Record_01",
+                  "value": [
+                    {
+                      "idShort": "Time",
+                      "valueType": "xs:dateTime",
+                      "value": "2026-05-28T08:00:00Z",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MachineId",
+                      "valueType": "xs:string",
+                      "value": "IMM",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MetricName",
+                      "valueType": "xs:string",
+                      "value": "good_parts",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Value",
+                      "valueType": "xs:string",
+                      "value": "1247",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Unit",
+                      "valueType": "xs:string",
+                      "value": "count",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "Record_02",
+                  "value": [
+                    {
+                      "idShort": "Time",
+                      "valueType": "xs:dateTime",
+                      "value": "2026-05-28T08:00:00Z",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MachineId",
+                      "valueType": "xs:string",
+                      "value": "IMM",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MetricName",
+                      "valueType": "xs:string",
+                      "value": "bad_parts",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Value",
+                      "valueType": "xs:string",
+                      "value": "38",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Unit",
+                      "valueType": "xs:string",
+                      "value": "count",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "Record_03",
+                  "value": [
+                    {
+                      "idShort": "Time",
+                      "valueType": "xs:dateTime",
+                      "value": "2026-05-28T08:00:00Z",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MachineId",
+                      "valueType": "xs:string",
+                      "value": "Laser",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MetricName",
+                      "valueType": "xs:string",
+                      "value": "count_finished_card",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Value",
+                      "valueType": "xs:string",
+                      "value": "512",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Unit",
+                      "valueType": "xs:string",
+                      "value": "count",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "Record_04",
+                  "value": [
+                    {
+                      "idShort": "Time",
+                      "valueType": "xs:dateTime",
+                      "value": "2026-05-28T08:00:00Z",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MachineId",
+                      "valueType": "xs:string",
+                      "value": "Laser",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MetricName",
+                      "valueType": "xs:string",
+                      "value": "last_job_duration_s",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Value",
+                      "valueType": "xs:double",
+                      "value": "17.9",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Unit",
+                      "valueType": "xs:string",
+                      "value": "S",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "Record_05",
+                  "value": [
+                    {
+                      "idShort": "Time",
+                      "valueType": "xs:dateTime",
+                      "value": "2026-05-28T08:00:00Z",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MachineId",
+                      "valueType": "xs:string",
+                      "value": "Robot",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MetricName",
+                      "valueType": "xs:string",
+                      "value": "successful_picks",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Value",
+                      "valueType": "xs:string",
+                      "value": "1801",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Unit",
+                      "valueType": "xs:string",
+                      "value": "count",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "Record_06",
+                  "value": [
+                    {
+                      "idShort": "Time",
+                      "valueType": "xs:dateTime",
+                      "value": "2026-05-28T08:00:00Z",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MachineId",
+                      "valueType": "xs:string",
+                      "value": "Robot",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "MetricName",
+                      "valueType": "xs:string",
+                      "value": "failed_picks",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Value",
+                      "valueType": "xs:int",
+                      "value": "12",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Unit",
+                      "valueType": "xs:string",
+                      "value": "count",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        }
+      ],
+      "modelType": "SubmodelElementCollection"
+    }
+  ],
+  "modelType": "Submodel"
+}

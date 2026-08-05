@@ -1,0 +1,356 @@
+{
+  "idShort": "DisplayedKPIs",
+  "description": [
+    {
+      "language": "en",
+      "text": "KPI values currently displayed on the dashboard panels. These are views derived from each machine's data (IMM, Laser Engraver, Delta Robot) and refreshed via MQTT and FastAPI REST. The authoritative data resides in each machine's own AAS; this submodel represents what the dashboard renders at a given moment."
+    }
+  ],
+  "id": "https://hs-emden-leer.de/ids/sm/DisplayedKPIs_7027952",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "QualityOverview",
+      "value": [
+        {
+          "idShort": "ReportingPeriod",
+          "valueType": "xs:date",
+          "value": "2026-05-28",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "TotalDefects",
+          "valueType": "xs:int",
+          "value": "57",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "OverallYield",
+          "valueType": "xs:double",
+          "value": "98.4",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "TotalGoodParts",
+          "valueType": "xs:int",
+          "value": "3560",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "PlantOEE",
+          "valueType": "xs:double",
+          "value": "84.3",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "LastUpdated",
+          "valueType": "xs:date",
+          "value": "2026-05-28",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "PlantQualityRate",
+          "valueType": "xs:double",
+          "value": "97.0",
+          "modelType": "Property"
+        }
+      ],
+      "modelType": "SubmodelElementCollection"
+    },
+    {
+      "idShort": "PerMachineQuality",
+      "value": [
+        {
+          "idShort": "InjectionMouldingMachine",
+          "value": [
+            {
+              "idShort": "MachineId",
+              "valueType": "xs:string",
+              "value": "IMM",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "LastUpdated",
+              "valueType": "xs:dateTime",
+              "value": "2026-05-28T14:00:00Z",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "ModuleStatus",
+              "value": [
+                {
+                  "idShort": "Status",
+                  "valueType": "xs:string",
+                  "value": "Running",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "IsConnected",
+                  "valueType": "xs:boolean",
+                  "value": "true",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "Counts",
+              "value": [
+                {
+                  "idShort": "GoodPartsCount",
+                  "valueType": "xs:int",
+                  "value": "1247",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "BadPartsCount",
+                  "valueType": "xs:int",
+                  "value": "38",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "QualityIndicators",
+              "value": [
+                {
+                  "idShort": "OEE",
+                  "value": [
+                    {
+                      "idShort": "Availability",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "ConceptDescription",
+                            "value": "https://hs-emden-leer.de/ids/cd/OEE/Availability"
+                          }
+                        ]
+                      },
+                      "valueType": "xs:double",
+                      "value": "94.2",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Performance",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "ConceptDescription",
+                            "value": "https://hs-emden-leer.de/ids/cd/OEE/Performance"
+                          }
+                        ]
+                      },
+                      "valueType": "xs:double",
+                      "value": "88.7",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "Quality",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "ConceptDescription",
+                            "value": "https://hs-emden-leer.de/ids/cd/OEE/Quality"
+                          }
+                        ]
+                      },
+                      "valueType": "xs:double",
+                      "value": "97.0",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "OEE",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "ConceptDescription",
+                            "value": "https://hs-emden-leer.de/ids/cd/OEE/OEE"
+                          }
+                        ]
+                      },
+                      "valueType": "xs:double",
+                      "value": "81.1",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "LaserEngraver",
+          "value": [
+            {
+              "idShort": "MachineId",
+              "valueType": "xs:string",
+              "value": "Laser",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "LastUpdated",
+              "valueType": "xs:dateTime",
+              "value": "2026-05-28T14:00:00Z",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "ModuleStatus",
+              "value": [
+                {
+                  "idShort": "Status",
+                  "valueType": "xs:string",
+                  "value": "Running",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "IsConnected",
+                  "valueType": "xs:boolean",
+                  "value": "true",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "Counts",
+              "value": [
+                {
+                  "idShort": "FinishedCardCount",
+                  "valueType": "xs:int",
+                  "value": "512",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "RejectedCardCount",
+                  "valueType": "xs:int",
+                  "value": "7",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "QualityIndicators",
+              "value": [
+                {
+                  "idShort": "EngravingQualityRate",
+                  "valueType": "xs:double",
+                  "value": "98.6",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "DeltaRobot",
+          "value": [
+            {
+              "idShort": "MachineId",
+              "valueType": "xs:string",
+              "value": "Robot",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "LastUpdated",
+              "valueType": "xs:dateTime",
+              "value": "2026-05-28T14:00:00Z",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "ModuleStatus",
+              "value": [
+                {
+                  "idShort": "Status",
+                  "valueType": "xs:string",
+                  "value": "Busy",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "IsConnected",
+                  "valueType": "xs:boolean",
+                  "value": "true",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "Counts",
+              "value": [
+                {
+                  "idShort": "SuccessfulPicks",
+                  "valueType": "xs:int",
+                  "value": "1801",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "FailedPicks",
+                  "valueType": "xs:int",
+                  "value": "12",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "QualityIndicators",
+              "value": [
+                {
+                  "idShort": "PickSuccessRate",
+                  "valueType": "xs:double",
+                  "value": "99.3",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        }
+      ],
+      "modelType": "SubmodelElementCollection"
+    },
+    {
+      "idShort": "QualityAlerts",
+      "value": [
+        {
+          "idShort": "ActiveAlertsCount",
+          "valueType": "xs:string",
+          "value": "2",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "HighestSeverity",
+          "valueType": "xs:string",
+          "value": "Warning",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "LastAlertTimestamp",
+          "valueType": "xs:dateTime",
+          "value": "2026-05-28T13:42:00Z",
+          "modelType": "Property"
+        },
+        {
+          "idShort": "LastAlertMessage",
+          "valueType": "xs:string",
+          "value": "IMM bad parts ratio approaching 0.4% threshold",
+          "modelType": "Property"
+        }
+      ],
+      "modelType": "SubmodelElementCollection"
+    }
+  ],
+  "modelType": "Submodel"
+}

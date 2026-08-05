@@ -1,0 +1,3769 @@
+[
+  {
+    "idShort": "URIOfTheProduct",
+    "id": "0112/2///61987#ABN590#002",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "URIOfTheProduct"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "URIOfTheProduct"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "unique global identification of the product instance using an universal resource identifier (URI)"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerName",
+    "id": "0112/2///61987#ABA565#009",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerName"
+            }
+          ],
+          "dataType": "STRING_TRANSLATABLE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductDesignation",
+    "id": "0112/2///61987#ABA567#009",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductDesignation"
+            }
+          ],
+          "dataType": "STRING_TRANSLATABLE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductRoot",
+    "id": "0112/2///61360_7#AAS011#001",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductRoot"
+            }
+          ],
+          "dataType": "STRING_TRANSLATABLE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "top level of a 3 level manufacturer specific product hierarchy"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductFamily",
+    "id": "0112/2///61987#ABP464#002",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductFamily"
+            }
+          ],
+          "dataType": "STRING_TRANSLATABLE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "second level of a 3 level manufacturer specific product hierarchy"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductType",
+    "id": "0112/2///61987#ABA300#008",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductType"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "characteristic to differentiate between different products of a product family or special variants"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "OrderCodeOfManufacturer",
+    "id": "0112/2///61987#ABA950#008",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "OrderCodeOfManufacturer"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "unique combination of numbers and letters issued by the manufacturer that is used to identify the device for ordering"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ProductArticleNumberOfManufacturer",
+    "id": "0112/2///61987#ABA581#007",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ProductArticleNumberOfManufacturer"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "unique product identifier of the manufacturer"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SerialNumber",
+    "id": "0112/2///61987#ABA951#009",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "SerialNumber"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "unique combination of numbers and letters used to identify the device once it has been manufactured"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "YearOfConstruction",
+    "id": "0112/2///61987#ABP000#002",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "YearOfConstruction"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "year in which the manufacturing process is completed"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "DateOfManufacture",
+    "id": "0112/2///61987#ABB757#007",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "DateOfManufacture"
+            }
+          ],
+          "dataType": "DATE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "date when an item was manufactured"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "HardwareVersion",
+    "id": "0112/2///61987#ABA926#008",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "HardwareVersion"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "version of the hardware supplied with the device"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "FirmwareVersion",
+    "id": "0112/2///61987#ABA302#006",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "FirmwareVersion"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "version of the firmware supplied with the device"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SoftwareVersion",
+    "id": "0112/2///61987#ABA601#008",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "SoftwareVersion"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "version of the software used by the device"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "CountryOfOrigin",
+    "id": "0112/2///61987#ABP462#001",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "CountryOfOrigin"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "country where the product was manufactured"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "UniqueFacilityIdentifier",
+    "id": "https://admin-shell.io/idta/nameplate/3/0/UniqueFacilityIdentifier",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "UniqueFacilityIdentifier"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "CompanyLogo",
+    "id": "0112/2///61987#ABP463#001",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "CompanyLogo"
+            }
+          ],
+          "dataType": "STRING",
+          "definition": [
+            {
+              "language": "en",
+              "text": "a graphic mark used to represent a company, an organisation or a product"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SoftwareNameplate_Type",
+    "description": [
+      {
+        "language": "en",
+        "text": "This collection contains the type related information "
+      }
+    ],
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "SoftwareNameplate_Type"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Type"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "This collection contains the type related information "
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "URIOfTheProduct",
+    "id": "0173-1#02-AAY811#001",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "URIOfTheProduct"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ProductURI"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "unique global identification of the product using an universal resource identifier (URI)"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerName",
+    "id": "0173-1#02-AAO677#002",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerName"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ManufacturerName"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductDesignation",
+    "id": "0173-1#02-AAW338#001",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductDesignation"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Designation"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Short description of the product (short text) "
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductDescription",
+    "description": [
+      {
+        "language": "en",
+        "text": "EMPTY"
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/ManufacturerProductDescription",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductDescription"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Description"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "A description of the software product, provided by the manufacturer"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductFamily",
+    "id": "0173-1#02-AAU731#001",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductFamily"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ProductFamily"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "2nd level of a 3 level manufacturer specific product hierarchy"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ManufacturerProductType",
+    "id": "0173-1#02-AAO057#002",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ManufacturerProductType"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ProductType"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Characteristic to differentiate between different products of a product family or special variants"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SoftwareType",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/SoftwareType",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "type of the software"
+            },
+            {
+              "language": "de",
+              "text": "Softwaretyp"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "SoftwareType"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "type of the software"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Version",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/Version",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Version"
+            },
+            {
+              "language": "de",
+              "text": "Version"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Version"
+            },
+            {
+              "language": "de",
+              "text": "Version"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The complete version information consisting of Major Version, Minor Version, Revision and Build Number"
+            },
+            {
+              "language": "de",
+              "text": "Die vollständige Versionsnummer, bestehend aus Major Version, Minor Version, Revision und Build Number"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "VersionName",
+    "description": [
+      {
+        "language": "en",
+        "text": "The name this particular version is given."
+      },
+      {
+        "language": "de",
+        "text": "Der Name dieser Version."
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/VersionName",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "version name"
+            },
+            {
+              "language": "de",
+              "text": "Versionsname"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "VersionName"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The name this particular version is given."
+            },
+            {
+              "language": "de",
+              "text": "Versionsname"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "VersionInfo",
+    "description": [
+      {
+        "language": "en",
+        "text": "Version Information"
+      },
+      {
+        "language": "de",
+        "text": "Versionsinformation"
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/VersionInfo",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Version Information"
+            },
+            {
+              "language": "de",
+              "text": "Versionsinformation"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "VersionInfo"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Provides a textual description of most relevant characteristics of the version of the software"
+            },
+            {
+              "language": "de",
+              "text": "Versionsinformation"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ReleaseDate",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/ReleaseDate",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ReleaseDate"
+            },
+            {
+              "language": "de",
+              "text": "ReleaseDate"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ReleaseDate"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The moment in time, when this particular build of software was released."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ReleaseNotes",
+    "description": [
+      {
+        "language": "en",
+        "text": "contains information about this release"
+      },
+      {
+        "language": "de",
+        "text": "enthält Informationen zum aktuellen Release"
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/ReleaseNotes",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Release Notes"
+            },
+            {
+              "language": "de",
+              "text": "Ausgabestandsinformationen"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ReleaseNotes"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "contains information about this release"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "BuildDate",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/BuildDate",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "BuildDate"
+            },
+            {
+              "language": "de",
+              "text": "BuildDate"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "BuildDate"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The moment in time, when this particular build of software was created."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstallationURI",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/InstallationURI",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "InstallationURI"
+            },
+            {
+              "language": "de",
+              "text": "Installation-URI"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "installationURI"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the resource, where the software is being provided by the manufacturer."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstallationFile",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/InstallationFile",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "InstallationFile"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InstallationFile"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "software file for installation"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstallerType",
+    "description": [
+      {
+        "language": "en",
+        "text": "indicates the type of installer software"
+      },
+      {
+        "language": "de",
+        "text": "gibt den Typ der Installationssoftware an"
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/InstallerType",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Installer Type"
+            },
+            {
+              "language": "de",
+              "text": "Installationstyp"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InstallerType"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the type of installation package."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstallationChecksum",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateType/InstallationChecksum",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Installation Checksum"
+            },
+            {
+              "language": "de",
+              "text": "Prüfsumme der Installation"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Checksum"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "provides the checksum for the software available at InstallationURI"
+            },
+            {
+              "language": "de",
+              "text": "beinhaltet die Prüfsumme für die Software, die über InstallationURI angegeben ist"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SoftwareNameplate_Instance",
+    "description": [
+      {
+        "language": "en",
+        "text": "This collection contains the type related information "
+      }
+    ],
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "SoftwareNameplate_Instance"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Instance"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "This collection contains the instance related information "
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SerialNumber",
+    "id": "0173-1#02-AAM556#002",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "serial number"
+            },
+            {
+              "language": "de",
+              "text": "Seriennummer"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "SerialNumber"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "unique combination of numbers and letters used to identify the device once it has been manufactured"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InventoryTag",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InventoryTag",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Inventory Tag"
+            },
+            {
+              "language": "de",
+              "text": "Inventarkennzeichen"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InventoryTag"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Specifies an information used for inventory of the software."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "instanceName",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstanceName",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "instance name"
+            },
+            {
+              "language": "de",
+              "text": "Instanzname"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "instancename"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The name of the software instance."
+            },
+            {
+              "language": "de",
+              "text": "Instanzname"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstalledVersion",
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstalledVersion",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "installed version"
+            },
+            {
+              "language": "de",
+              "text": "installierte Version"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Version"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The version information of the installed instance, consisting of Major Version, Minor Version, Revision and Build Number"
+            },
+            {
+              "language": "de",
+              "text": "Die vollständige Versionsnummer der installierten Instanz, bestehend aus Major Version, Minor Version, Revision und Build Number"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstallationDate",
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstallationDate",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Installation Date"
+            },
+            {
+              "language": "de",
+              "text": "Tag der Installation"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InstallDate"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Date of Installation"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstallationPath",
+    "description": [
+      {
+        "language": "en",
+        "text": "Indicates the path to the installed instance of the software."
+      }
+    ],
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstallationPath",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Installation Path"
+            },
+            {
+              "language": "de",
+              "text": "Installationspfad"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InstallPath"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the path to the installed instance of the software."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstallationSource",
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstallationSource",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Installation Source"
+            },
+            {
+              "language": "de",
+              "text": "Installationsquelle"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InsSource"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the path to the installation files used in this instance of the software."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstalledOnArchitecture",
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstalledOnArchitecture",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "InstalledOnArchitecture"
+            },
+            {
+              "language": "de",
+              "text": "Installiert auf Architektur"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InsOnArch"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the processor architecture this instance is installed on."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstalledOnOS",
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstalledOnOS",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "InstalledOnOS"
+            },
+            {
+              "language": "en",
+              "text": "InstalledOnOS"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InstalledOnOS"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the operating system this instance is installed on."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstalledOnHost",
+    "description": [
+      {
+        "language": "en",
+        "text": "Indicates the host system in case of a virtual environment."
+      },
+      {
+        "language": "de",
+        "text": "Gibt den Host an, falls es sich um eine virtuelle Umgebung handelt"
+      }
+    ],
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstalledOnHost",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Installed on Host"
+            },
+            {
+              "language": "de",
+              "text": "installiert auf Host"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InsOnHost"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the host system in case of a virtual environment."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstalledModules",
+    "description": [
+      {
+        "language": "en",
+        "text": "Indicates which modules of a software have been installed."
+      },
+      {
+        "language": "de",
+        "text": "gibt an, welche Module der Software installiert wurden."
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstalledModules",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "InstalledModules"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InsModules"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates which modules of a software have been installed."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InstalledModule",
+    "description": [
+      {
+        "language": "en",
+        "text": "Name of module"
+      },
+      {
+        "language": "de",
+        "text": "Name des Moduls"
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/InstalledModule",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Installed Module"
+            },
+            {
+              "language": "de",
+              "text": "Installiertes Modul"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "InsModule"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The name of a particular module installed."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ConfigurationPaths",
+    "description": [
+      {
+        "language": "en",
+        "text": "collection of configuration path entries"
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/ConfigurationPaths",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ConfigurationPaths"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ConfigPaths"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "collection of configuration path entries"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ConfigurationPath",
+    "description": [
+      {
+        "language": "en",
+        "text": "Indicates the path to the configuration."
+      }
+    ],
+    "administration": {
+      "version": "1",
+      "revision": "0"
+    },
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/ConfigurationPath",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ConfigurationPath"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Configpath"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the path to the configuration."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ConfigurationType",
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/ConfigurationType",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Type of Configuration"
+            },
+            {
+              "language": "de",
+              "text": "Typ der Konfiguration"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ConfigType"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the type of configuration (e.g. general configuration, user configuration)"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SLAInformation",
+    "description": [
+      {
+        "language": "en",
+        "text": "Service Level Agreement Information"
+      }
+    ],
+    "id": "https://admin-shell.io/idta/SoftwareNameplate/1/0/SoftwareNameplate/SoftwareNameplateInstance/SLAInformation",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "SLA Information"
+            },
+            {
+              "language": "de",
+              "text": "Information für SLA"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "SLAInformation"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "Indicates the actual service level agreements."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ContactInformation",
+    "id": "https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "ContactInformation"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ContactInfo"
+            }
+          ],
+          "definition": [
+            {
+              "language": "en",
+              "text": "The SMC “ContactInformation” contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "isCaseOf": [
+      {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "Submodel",
+            "value": "0173-1#02-AAQ837#005"
+          }
+        ]
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Metadata",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Metadata/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihen Metadaten"
+            },
+            {
+              "language": "en",
+              "text": "time series metadata"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Metadaten"
+            },
+            {
+              "language": "en",
+              "text": "metadata"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Eine Reihe von Daten, welche die Zeitreihe beschreiben und über sie Auskunft geben"
+            },
+            {
+              "language": "en",
+              "text": "A set of data describing and providing information about the time series"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Name",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Metadata/Name/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Name der Zeitreihe"
+            },
+            {
+              "language": "en",
+              "text": "Name of the time series"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Name"
+            },
+            {
+              "language": "en",
+              "text": "Name"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Aussagekräftiger Name zur Beschriftung"
+            },
+            {
+              "language": "en",
+              "text": "Meaningful name for labeling"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Description",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Metadata/Description/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Beschreibung der Zeitreihe"
+            },
+            {
+              "language": "en",
+              "text": "Description of the time series"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Beschreibung"
+            },
+            {
+              "language": "en",
+              "text": "Description"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Kurze Beschreibung der Zeitreihendaten"
+            },
+            {
+              "language": "en",
+              "text": "Short description of the time series"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "extensions": [
+      {
+        "semanticId": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#Property"
+            }
+          ]
+        },
+        "name": "samm-property",
+        "value": ""
+      }
+    ],
+    "idShort": "Record",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Record/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihen-Datensatz"
+            },
+            {
+              "language": "en",
+              "text": "Time series record"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Datensatz"
+            },
+            {
+              "language": "en",
+              "text": "Record"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Ein Zeitreihen-Datensatz ist durch seine ID innerhalb der Zeitreihe eindeutig und beinhaltet die auf die ID referenzierten Zeitstempel und Variablenwerte. Vergleichbar mit einer Zeile in einer Tabelle"
+            },
+            {
+              "language": "en",
+              "text": "A time series record is unique by its ID within the time series and contains the timestamps and variable values referenced to the ID. Similar to a row in a table"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "RelativeTimePoint",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/RelativePointInTime/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitstempel"
+            },
+            {
+              "language": "en",
+              "text": "Timestamp"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Zeit"
+            },
+            {
+              "language": "en",
+              "text": "Time"
+            }
+          ],
+          "unit": "s",
+          "symbol": "t",
+          "definition": [
+            {
+              "language": "de",
+              "text": "Zeitpunktangabe in Sekunden. Zeitpunkte referenzieren auf die Startzeit des Zeitreihensegments."
+            },
+            {
+              "language": "en",
+              "text": "Point of Time in seconds. Time points refer to the start time of the time series segment."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Segments",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segments/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihensegmente"
+            },
+            {
+              "language": "en",
+              "text": "time series segments"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Segmente"
+            },
+            {
+              "language": "en",
+              "text": "segments"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Enthält Segmente einer Zeitreihe"
+            },
+            {
+              "language": "en",
+              "text": "Contains segments of a time series"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "ExternalSegment",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segments/ExternalSegment/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Externes Zeitreihensegment"
+            },
+            {
+              "language": "en",
+              "text": "External time series segment"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Segment"
+            },
+            {
+              "language": "en",
+              "text": "Segment"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Referenz auf eine Datei von Datenpunkten in aufeinanderfolgender Reihenfolge über einen bestimmten Zeitraum"
+            },
+            {
+              "language": "en",
+              "text": "Reference to a file of data points in sequential order over a period of time"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Name",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/Name/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Name des Zeitreihensegments"
+            },
+            {
+              "language": "en",
+              "text": "Name of time series segment"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "zr-segsname"
+            },
+            {
+              "language": "en",
+              "text": "ts-segname"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Aussagekräftiger Name zur Beschriftung."
+            },
+            {
+              "language": "en",
+              "text": "Meaningful name for labeling."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Description",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/Description/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Beschreibung des Zeitreihensegments"
+            },
+            {
+              "language": "en",
+              "text": "Description of the time series segment"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Segbeschreibung"
+            },
+            {
+              "language": "en",
+              "text": "Segdescription"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Kurze Beschreibung des Zeitreihensegments."
+            },
+            {
+              "language": "en",
+              "text": "Short description of the time series segment."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "RecordCount",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/RecordCount/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Anzahl der Datensätze"
+            },
+            {
+              "language": "en",
+              "text": "Record count"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Recordcount"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Gibt an, wie viele Datensätze in einem Segment vorhanden sind."
+            },
+            {
+              "language": "en",
+              "text": "Indicates how many records are present in a segment."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "StartTime",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/StartTime/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Startzeit"
+            },
+            {
+              "language": "en",
+              "text": "Start time"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Starttime"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Enthält den ersten aufgezeichneten Zeitstempel des Zeitreihensegments und stellt somit den Anfang einer Zeitreihe dar. Zeitformat und -skala entspricht dem der Zeitreihe."
+            },
+            {
+              "language": "en",
+              "text": "Contains the first recorded timestamp of the time series segment and thus represents the beginning of a time series. Time format and scale corresponds to that of the time series."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "EndTime",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Endzeit"
+            },
+            {
+              "language": "en",
+              "text": "End time"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Endtime"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Enthält den letzten aufgezeichneten Zeitstempel des Zeitreihensegments und stellt somit das Ende einer Zeitreihe dar. Zeitformat und -skala entspricht dem der Zeitreihe."
+            },
+            {
+              "language": "en",
+              "text": "Contains the last recorded timestamp of the time series segment and thus represents the end of a time series. Time format and scale corresponds to that of the time series."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Duration",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Dauer"
+            },
+            {
+              "language": "en",
+              "text": "duration"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "duration"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Zeitraum den das Segment umfasst, dargestellt nach ISO 8601 durch das Format P[n]Y[n]M[n]DT[n]H[n]M[n]S"
+            },
+            {
+              "language": "en",
+              "text": "Period covered by the segment, represented according to ISO 8601 by the format P[n]Y[n]M[n]DT[n]H[n]M[n]S"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SamplingInterval",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingInterval/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Abtastintervall"
+            },
+            {
+              "language": "en",
+              "text": "Sampling interval"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "sampinterval"
+            }
+          ],
+          "unit": "s",
+          "symbol": "t",
+          "definition": [
+            {
+              "language": "de",
+              "text": "Der zeitliche Abstand zwischen zwei Datenpunkten (Länge eines Zyklus)."
+            },
+            {
+              "language": "en",
+              "text": "The time period between two time series records (Length of cycle)."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "SamplingRate",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/SamplingRate/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Abtastrate"
+            },
+            {
+              "language": "en",
+              "text": "Sampling rate"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "samprate"
+            }
+          ],
+          "unit": "Hz",
+          "definition": [
+            {
+              "language": "de",
+              "text": "Definiert die Anzahl der Abtastungen pro Sekunde für eine regelmäßige Zeitreihe in Hz."
+            },
+            {
+              "language": "en",
+              "text": "Defines the number of samples per second for a regular time series in Hz."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "State",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/State/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Status"
+            },
+            {
+              "language": "en",
+              "text": "State"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "state"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Zustand der Zeitreihe bezogen auf ihren Fortschritt"
+            },
+            {
+              "language": "en",
+              "text": "State of the time series related to its progress"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "LastUpdate",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segment/LastUpdate/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Letzte Aktualisierung"
+            },
+            {
+              "language": "en",
+              "text": "Last update"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "lastupdate"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Zeitpunkt der letzten Veränderung"
+            },
+            {
+              "language": "en",
+              "text": "Time of the last chance"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "File",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/File/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihen Datendatei"
+            },
+            {
+              "language": "en",
+              "text": "time series data file"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ts-datafiles"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Abfolge von Datenpunkten in aufeinanderfolgender Reihenfolge über einen bestimmten Zeitraum innerhalb eines ausgelagerten Datenfiles"
+            },
+            {
+              "language": "en",
+              "text": "Sequence of data points in sequential order over a period of time within a paged data file"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Blob",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Blob/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihen Blob"
+            },
+            {
+              "language": "en",
+              "text": "time series Blob"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ts-blob"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Abfolge von Datenpunkten in aufeinanderfolgender Reihenfolge über einen bestimmten Zeitraum innerhalb eines BLOBs"
+            },
+            {
+              "language": "en",
+              "text": "Sequence of data points in sequential order over a period of time within a BLOB"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "LinkedSegment_IMM",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segments/LinkedSegment/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Verknüpftes Zeitreihensegment"
+            },
+            {
+              "language": "en",
+              "text": "Linked time series segment"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Segment"
+            },
+            {
+              "language": "en",
+              "text": "segment"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Referenz auf einen Endpunkt von Datenpunkten in aufeinanderfolgender Reihenfolge über einen bestimmten Zeitraum"
+            },
+            {
+              "language": "en",
+              "text": "Reference to an endpoint of data points in sequential order over a period of time"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Endpoint",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Endpoint/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihen API Endpunkt "
+            },
+            {
+              "language": "en",
+              "text": "time series API endpoint"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Endpunkt"
+            },
+            {
+              "language": "en",
+              "text": "Endpoint"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Gibt einen Standort einer Ressource auf einen API-Server an, über den Zeitreihen angefragt werden können"
+            },
+            {
+              "language": "en",
+              "text": "Specifies a location of a resource on an API server through which time series can be requested"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Query",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Query/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihen API Query"
+            },
+            {
+              "language": "en",
+              "text": "time series API Query"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Query"
+            },
+            {
+              "language": "en",
+              "text": "Query"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "generische Abfrage zum Lesen von Zeitreihen-Daten aus einer API"
+            },
+            {
+              "language": "en",
+              "text": "generic query component to read time series data from an API"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "InternalSegment",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Segments/InternalSegment/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihensegment"
+            },
+            {
+              "language": "en",
+              "text": "time series segment"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "de",
+              "text": "Segment"
+            },
+            {
+              "language": "en",
+              "text": "segment"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Gruppierte abfolge von Datenpunkten in aufeinanderfolgender Reihenfolge über einen bestimmten Zeitraum"
+            },
+            {
+              "language": "en",
+              "text": "Grouped sequence of data points in successive order over a specified period of time"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "Records",
+    "administration": {
+      "version": "1",
+      "revision": "1"
+    },
+    "id": "https://admin-shell.io/idta/TimeSeries/Records/1/1",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "http://admin-shell.io/DataSpecificationTemplates/DataSpecificationIEC61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "de",
+              "text": "Zeitreihen-Datensätze"
+            },
+            {
+              "language": "en",
+              "text": "Time series records"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "ts-records"
+            }
+          ],
+          "definition": [
+            {
+              "language": "de",
+              "text": "Gruppe von Datenpunkten in aufeinanderfolgender Reihenfolge über einen bestimmten Zeitraum"
+            },
+            {
+              "language": "en",
+              "text": "Group of data points in successive order over a specified period of time"
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "OEE_Availability",
+    "id": "https://hs-emden-leer.de/ids/cd/OEE/Availability",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "OEE Availability"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Availability"
+            }
+          ],
+          "unit": "%",
+          "dataType": "REAL_MEASURE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "Availability is the proportion of scheduled production time during which the machine was available for production. Calculated as actual_run_time / planned_production_time. One of the three OEE pillars (Availability × Performance × Quality = OEE)."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "OEE_Performance",
+    "id": "https://hs-emden-leer.de/ids/cd/OEE/Performance",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "OEE Performance"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Performance"
+            }
+          ],
+          "unit": "%",
+          "dataType": "REAL_MEASURE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "Performance is the ratio of actual production speed to the ideal/maximum speed. Calculated as (ideal_cycle_time × total_count) / run_time. One of the three OEE pillars."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "OEE_Quality",
+    "id": "https://hs-emden-leer.de/ids/cd/OEE/Quality",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "OEE Quality"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "Quality"
+            }
+          ],
+          "unit": "%",
+          "dataType": "REAL_MEASURE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "Quality is the proportion of good parts out of total parts produced. Calculated as good_count / total_count. One of the three OEE pillars and the direct quality indicator within OEE."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  },
+  {
+    "idShort": "OEE_Composite",
+    "id": "https://hs-emden-leer.de/ids/cd/OEE/OEE",
+    "embeddedDataSpecifications": [
+      {
+        "dataSpecification": {
+          "type": "ModelReference",
+          "keys": [
+            {
+              "type": "GlobalReference",
+              "value": "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+            }
+          ]
+        },
+        "dataSpecificationContent": {
+          "preferredName": [
+            {
+              "language": "en",
+              "text": "Overall Equipment Effectiveness"
+            }
+          ],
+          "shortName": [
+            {
+              "language": "en",
+              "text": "OEE"
+            }
+          ],
+          "unit": "%",
+          "dataType": "REAL_MEASURE",
+          "definition": [
+            {
+              "language": "en",
+              "text": "Overall Equipment Effectiveness is the composite manufacturing performance metric calculated as Availability × Performance × Quality. World-class OEE is typically considered 85% or above. Standard benchmark of manufacturing productivity."
+            }
+          ],
+          "modelType": "DataSpecificationIec61360"
+        }
+      }
+    ],
+    "modelType": "ConceptDescription"
+  }
+]

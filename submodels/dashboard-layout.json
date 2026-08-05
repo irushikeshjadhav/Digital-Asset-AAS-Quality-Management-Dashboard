@@ -1,0 +1,194 @@
+{
+  "idShort": "DashboardLayout",
+  "id": "https://hs-emden-leer.de/ids/sm/DashboardLayout_7027952",
+  "kind": "Instance",
+  "submodelElements": [
+    {
+      "idShort": "Title",
+      "valueType": "xs:string",
+      "value": "Quality Management Dashboard",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "Description",
+      "valueType": "xs:string",
+      "value": "Cross-machine quality monitoring dashboard for the Digital Factory",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "Version",
+      "valueType": "xs:string",
+      "value": "1.0.0",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "Theme",
+      "valueType": "xs:string",
+      "value": "Dark",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "RefreshIntervalSeconds",
+      "valueType": "xs:int",
+      "value": "5",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "DefaultTimeRange",
+      "valueType": "xs:string",
+      "value": "Last 6 hours",
+      "modelType": "Property"
+    },
+    {
+      "idShort": "Panels",
+      "value": [
+        {
+          "idShort": "OverviewSection",
+          "value": [
+            {
+              "idShort": "QualityOverviewPanel",
+              "value": [
+                {
+                  "idShort": "Title",
+                  "valueType": "xs:string",
+                  "value": "Plant Quality Overview",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "ChartType",
+                  "valueType": "xs:string",
+                  "value": "StatPanel",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "DataSource",
+                  "valueType": "xs:string",
+                  "value": "DisplayedKPIs.QualityOverview",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "ComparisonSection",
+          "value": [
+            {
+              "idShort": "QualityRatePanel",
+              "value": [
+                {
+                  "idShort": "Title",
+                  "valueType": "xs:string",
+                  "value": "Quality Rate by Machine",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "ChartType",
+                  "valueType": "xs:string",
+                  "value": "BarChart",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "DataSource",
+                  "valueType": "xs:string",
+                  "value": "DisplayedKPIs.PerMachineQuality",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "GoodVsBadPanel",
+              "value": [
+                {
+                  "idShort": "Title",
+                  "valueType": "xs:string",
+                  "value": "Good vs Bad Parts by Machine",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "ChartType",
+                  "valueType": "xs:string",
+                  "value": "BarChart",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "DataSource",
+                  "valueType": "xs:string",
+                  "value": "DisplayedKPIs.PerMachineQuality",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "TrendSection",
+          "value": [
+            {
+              "idShort": "QualityTrendPanel",
+              "value": [
+                {
+                  "idShort": "Title",
+                  "valueType": "xs:string",
+                  "value": "Quality Trend Over Time",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "ChartType",
+                  "valueType": "xs:string",
+                  "value": "LineChart",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "DataSource",
+                  "valueType": "xs:string",
+                  "value": "TimeSeries",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "AlertSection",
+          "value": [
+            {
+              "idShort": "QualityAlertsPanel",
+              "value": [
+                {
+                  "idShort": "Title",
+                  "valueType": "xs:string",
+                  "value": "Active Quality Alerts",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "ChartType",
+                  "valueType": "xs:string",
+                  "value": "Table",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "DataSource",
+                  "valueType": "xs:string",
+                  "value": "DisplayedKPIs.QualityAlerts",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        }
+      ],
+      "modelType": "SubmodelElementCollection"
+    }
+  ],
+  "modelType": "Submodel"
+}
