@@ -23,52 +23,193 @@ The AAS was built first as a **Type 1 AASX package** (AASX Package Explorer) and
 
 ---
 
+## Repository Structure
+
+```
+.
+├── aasx/
+│   └── QualityManagementDashboard_7027952.aasx     # Type 1 AASX package
+├── aas-full-export.json                             # Whole AAS environment in one file
+├── submodels/
+│   ├── digital-nameplate.json
+│   ├── software-nameplate.json
+│   ├── time-series.json
+│   ├── displayed-kpis.json
+│   └── dashboard-layout.json
+├── concept-descriptions/
+│   └── concept-descriptions.json                    # 81 total: 4 custom OEE + 77 standard IDTA/eCl@ss
+└── docs/
+    ├── aas-core-submodels-diagram.png                # Figure 2 - AAS core + submodel structure
+    ├── interaction-sequence-diagram.png              # Figure 1 - system-integration use case
+    └── screenshots/
+        ├── digital-nameplate.png
+        ├── software-nameplate.png
+        ├── displayed-kpis.png
+        ├── time-series.png
+        ├── dashboard-layout.png
+        └── live-demo-digital-nameplate.png
+```
+
+---
+
+## Architecture
+
+<p align="center"><img src="docs/aas-core-submodels-diagram.png" width="700" alt="AAS core and submodels diagram"></p>
+
+The AAS core references five submodels. `DisplayedKPIs` additionally links out to four custom Concept Descriptions through `semanticId`, so every OEE property carries a formally resolvable meaning rather than relying on a name convention alone.
+
+The primary use case - an external MES or Industrie 4.0 component discovering the dashboard's capabilities and reading live KPIs - follows this interaction sequence:
+
+<p align="center"><img src="docs/interaction-sequence-diagram.png" width="650" alt="Interaction sequence diagram"></p>
+
+1. `GET /submodels` - discover which submodels exist (the dashboard's capability description)
+2. `GET /submodels/{DisplayedKPIs-id-base64}/submodel-elements` - retrieve current KPI values
+3. `GET` the Concept Description behind any property's `semanticId` - resolve its exact meaning (unit, data type, definition) with no vendor-specific documentation needed
+
+---
+
 ## Submodels
 
-| Submodel | Basis | Purpose |
+### a) Digital Nameplate (IDTA 02006)
+
+Provides the asset's identity metadata - the entry point for automated asset lookup. Key populated values in this instance:
+
+| Property | Value |
+|---|---|
+| ManufacturerName | Hochschule Emden/Leer |
+| ManufacturerProductDesignation | Quality Management Dashboard |
+| ManufacturerProductFamily | Quality Dashboards |
+| ManufacturerProductRoot | Digital Factory Dashboards |
+| SerialNumber | QMD-2026-001 |
+| YearOfConstruction | 2026 |
+| DateOfManufacture | 2026-05-18 |
+| SoftwareVersion | 1.0.0 |
+| CountryOfOrigin | DE |
+| URIOfTheProduct | `https://hs-emden-leer.de/ids/asset/QualityManagementDashboard_7027952` |
+
+<p align="center"><img src="docs/screenshots/digital-nameplate.png" width="700" alt="Digital Nameplate submodel screenshot"></p>
+
+### b) Software Nameplate (IDTA 02007)
+
+Adds software-specific metadata, split into a **Type** section (properties shared by the software product in general) and an **Instance** section (deployment-specific details for this running copy): installed version, host, operating system, installation path. Together with the Digital Nameplate, this gives a complete machine-readable identity record for the software asset.
+
+<p align="center"><img src="docs/screenshots/software-nameplate.png" width="700" alt="Software Nameplate submodel screenshot"></p>
+
+### c) TimeSeries (IDTA 02008)
+
+Stores historical KPI records using the **LinkedSegments** pattern - each machine gets its own segment referencing an external REST endpoint, rather than the AAS embedding raw history inline:
+
+| Segment | Endpoint pattern | Sampling interval |
 |---|---|---|
-| Digital Nameplate | IDTA 02006 v3.0 | Identity and manufacturer metadata |
-| Software Nameplate | IDTA 02007 v1.0 | Software-specific metadata (type, version, installation) |
-| TimeSeries | IDTA 02008 v1.1 | Historical KPI time-series records (via LinkedSegments) |
-| DisplayedKPIs | Custom | Capability description: which KPIs the dashboard displays |
-| DashboardLayout | Custom | UI layout configuration |
+| `LinkedSegment_IMM` | `.../api/v1/machines/IMM/metrics` | 60s |
+| `LinkedSegment_LaserEngraver` | `.../api/v1/machines/Laser/metrics` | 60s |
+| `LinkedSegment_DeltaRobot` | `.../api/v1/machines/Robot/metrics` | 60s |
+| `InternalSegment` | (reserved for inline records, unused in this instance) | - |
 
-**DisplayedKPIs** is the core submodel, organized into three collections: `QualityOverview` (plant-level PlantOEE, PlantQualityRate, OverallYield), `PerMachineQuality` (a full OEE breakdown for the IMM; a single quality indicator each for the laser engraver and delta robot), and `QualityAlerts` (active alerts, severity, latest message).
+Each segment additionally carries `RecordCount`, `StartTime`/`EndTime`, `Duration`, and `State`, so a consumer can tell how much history is available before querying it. Records themselves follow a long-format schema (`Time`, `MachineId`, `MetricName`, `Value`, `Unit`) - one schema accommodates all three machines without a separate structure per source.
 
-**TimeSeries** uses the IDTA LinkedSegments pattern - it references external data segments (served by a REST API backend) rather than embedding raw history inline, keeping the AAS itself lightweight.
+<p align="center"><img src="docs/screenshots/time-series.png" width="700" alt="TimeSeries submodel screenshot"></p>
+
+### d) DisplayedKPIs (custom)
+
+The capability description at the heart of this AAS - organized into three collections:
+
+**QualityOverview** - plant-level rollup:
+
+| Property | Example value |
+|---|---|
+| PlantOEE | 84.3 |
+| PlantQualityRate | 97.0 |
+| OverallYield | 98.4 |
+| TotalGoodParts | 3560 |
+| TotalDefects | 57 |
+| ReportingPeriod / LastUpdated | 2026-05-28 |
+
+**PerMachineQuality** - one entry per machine, each with `MachineId`, `LastUpdated`, a `ModuleStatus` block (`Status`, `IsConnected`), a `Counts` block, and a `QualityIndicators` block:
+
+| Machine | Counts | Quality indicators |
+|---|---|---|
+| InjectionMouldingMachine | GoodPartsCount, BadPartsCount | Full OEE breakdown: Availability, Performance, Quality, OEE |
+| LaserEngraver | FinishedCardCount, RejectedCardCount | EngravingQualityRate |
+| DeltaRobot | SuccessfulPicks, FailedPicks | PickSuccessRate |
+
+The IMM's four OEE properties each carry a `semanticId` pointing to one of the four custom Concept Descriptions (see below) - the only place in this submodel where semantic linking is used, since the OEE pillars are the properties most likely to be consumed by an external system without prior context.
+
+**QualityAlerts** - `ActiveAlertsCount`, `HighestSeverity`, `LastAlertTimestamp`, `LastAlertMessage`.
+
+<p align="center"><img src="docs/screenshots/displayed-kpis.png" width="700" alt="DisplayedKPIs submodel screenshot"></p>
+
+### e) DashboardLayout (custom)
+
+Describes the UI configuration a rendering client would use to reconstruct the dashboard: global settings (`Title`, `Description`, `Version`, `Theme`, `RefreshIntervalSeconds`, `DefaultTimeRange`) plus a `Panels` structure grouped into four sections:
+
+| Section | Panel | Chart type | Data source |
+|---|---|---|---|
+| OverviewSection | QualityOverviewPanel | StatPanel | `DisplayedKPIs.QualityOverview` |
+| ComparisonSection | QualityRatePanel | BarChart | `DisplayedKPIs.PerMachineQuality` |
+| ComparisonSection | GoodVsBadPanel | BarChart | `DisplayedKPIs.PerMachineQuality` |
+| TrendSection | QualityTrendPanel | LineChart | `TimeSeries` |
+| AlertSection | QualityAlertsPanel | Table | `DisplayedKPIs.QualityAlerts` |
+
+Each panel names its data source by submodel/collection path, so a rendering client (or a different dashboard technology entirely) knows exactly which AAS element feeds which visual, without hard-coded UI logic.
+
+<p align="center"><img src="docs/screenshots/dashboard-layout.png" width="700" alt="DashboardLayout submodel screenshot"></p>
 
 ---
 
 ## Concept Descriptions
 
-Four custom Concept Descriptions ground the OEE properties in a formally specified semantic model, using the IEC 61360 data specification template (PreferredName, Definition, DataType, Unit):
+The package carries **81 Concept Descriptions** in total. Seventy-seven are standard, auto-included definitions that ship with the IDTA Digital Nameplate, Software Nameplate, and TimeSeries templates (e.g. `ManufacturerName`, `SerialNumber`, `InstalledOnOS`, `RelativeTimePoint`) - these aren't authored per-project, they come bundled with the templates themselves.
 
-- **OEE** - Overall Equipment Effectiveness as the product of the three pillars (`REAL_MEASURE`, %)
-- **Availability** - ratio of actual to planned operating time (`REAL_MEASURE`, %)
-- **Performance** - ratio of actual to ideal cycle throughput (`REAL_MEASURE`, %)
-- **Quality** - ratio of conforming to total produced parts (`REAL_MEASURE`, %)
+The remaining **four are custom**, written specifically for this project to formally ground the OEE pillars using the IEC 61360 data specification template:
 
-Each DisplayedKPIs property referencing these pillars is linked through a `semanticId`, so any consumer can resolve the exact meaning of every value without vendor-specific documentation.
+| Concept | Full definition |
+|---|---|
+| **OEE_Composite** | Overall Equipment Effectiveness is the composite manufacturing performance metric calculated as Availability x Performance x Quality. World-class OEE is typically considered 85% or above. Standard benchmark of manufacturing productivity. |
+| **OEE_Availability** | The proportion of scheduled production time during which the machine was available for production. Calculated as `actual_run_time / planned_production_time`. |
+| **OEE_Performance** | The ratio of actual production speed to the ideal/maximum speed. Calculated as `(ideal_cycle_time x total_count) / run_time`. |
+| **OEE_Quality** | The proportion of good parts out of total parts produced. Calculated as `good_count / total_count`. |
+
+All four use `DataType: REAL_MEASURE`, `Unit: %`, and are addressed under the `https://hs-emden-leer.de/ids/cd/OEE/` namespace. They're referenced from the DisplayedKPIs submodel's IMM OEE block via `semanticId`, so any consumer can resolve the exact calculation behind a value without vendor-specific documentation.
 
 ---
 
-## Architecture & Deployment
+## Using This AAS in an Industrial Deployment
 
-Three cooperating services make up the deployment:
+This package was built against Hochschule Emden/Leer's Digital Factory, but the AAS itself - the submodel structure, the semantic modeling pattern, the identifier scheme - is general-purpose. Reusing it for a real production line means swapping the machine-specific pieces while keeping that structure intact.
 
-| Service | Role | Port |
-|---|---|---|
-| BaSyX AAS Environment | Stores AAS shells/submodels, exposes the IDTA Submodel Repository REST API (authoritative interface) | 8081 |
-| BaSyX AAS UI | Browser-based repository browser (supplementary view) | 3001 |
-| REST API service | Lightweight HTTP service backed by TimescaleDB, serves historical KPI records referenced by TimeSeries | 8000 |
+### 1. Deploy it on your own AAS server
 
-Three protocols are active end-to-end: **OPC UA** at the field level (each production module), **MQTT** for live distribution (ingestion service to Mosquitto broker), and **HTTP/REST** for AAS access (IDTA Submodel Repository API, submodel IDs passed as Base64url-encoded strings).
+Any IDTA-compliant Type 2 AAS server can host this package - Eclipse BaSyX, AASX Server, FA³ST, or similar. Two ways in:
 
-At startup, the AASX package is uploaded to BaSyX via its REST API, making all five submodels immediately addressable as individual REST resources - e.g.:
+- **Fastest:** upload `aas-full-export.json` (or the `.aasx` file in `aasx/`) directly through your server's import/upload endpoint. This restores the entire environment - the AAS, all five submodels, and all concept descriptions - in one step. Most Type 2 servers, BaSyX included, expose a REST endpoint or admin UI for exactly this; check your server's API documentation for the precise call, since the exact path varies by product and version.
+- **Selective:** load individual files from `submodels/` one at a time if you only need specific capabilities - for example, deploying just `displayed-kpis.json` for a lightweight, KPI-only integration without the nameplate metadata.
+
+### 2. Re-point the identifier namespace
+
+Every ID in this package uses the `https://hs-emden-leer.de/ids/...` namespace with the `_7027952` instance suffix - that's this specific student instance. Before deploying in your own organization, do a find-and-replace across the JSON files to swap in your own domain (e.g., `https://yourcompany.com/ids/...`), so the identifiers correctly reflect your ownership and don't collide with the original.
+
+### 3. Adapt DisplayedKPIs to your own machines
+
+The `PerMachineQuality` collection currently models one IMM, one laser engraver, and one delta robot. Add, rename, or remove machine entries to match your own shop floor. Keep the same four-property OEE pattern (Availability, Performance, Quality, OEE) for any machine where you want the full breakdown; use a single quality-rate property where a partial breakdown is all that's available - exactly how the laser engraver and delta robot are modeled here.
+
+### 4. Reconnect TimeSeries to your own historian
+
+`TimeSeries` doesn't store history inline - it references external REST endpoints via the LinkedSegments pattern, one segment per machine. Point these references at your own historian or time-series database's API instead of the original backend used in this project.
+
+### 5. Keep or extend the Concept Descriptions
+
+The four OEE Concept Descriptions are standard IEC 61360 definitions, not specific to this factory - they're safe to reuse as-is in most manufacturing contexts, calculation formulas included. If you add your own custom KPIs, follow the same pattern: create a Concept Description with `PreferredName`, `Definition`, `DataType`, and `Unit`, then reference it from your property via `semanticId`.
+
+### 6. Consume it from an MES or enterprise system
+
+Once deployed, any system can read live values without a vendor-specific adapter:
 
 ```
-GET /submodels/{submodel-id-base64}/submodel-elements
+GET /submodels/{base64-encoded-submodel-id}/submodel-elements
 ```
+
+Resolve any property's meaning by following its `semanticId` to the matching Concept Description - no manual documentation lookup required on the consumer's side. This is the same interaction pattern shown in the Architecture section above: an MES discovers the dashboard's capabilities, reads current KPIs, and resolves their semantics, all without a custom integration.
 
 ---
 
@@ -103,21 +244,11 @@ Each submodel carries an instance-specific ID under the same namespace, required
 
 ---
 
-## Demonstration
+## Live Demonstration
 
 Type 2 behaviour was validated two ways: directly querying the live BaSyX Submodel Repository REST API, and browsing the deployed shell through the BaSyX AAS UI - confirming real, populated instance data (not an empty template) is served for every submodel.
 
----
-
-## Repository Structure
-
-```
-.
-├── aasx/                     # Type 1 AASX package export
-├── submodels/                # Individual submodel JSON exports
-├── concept-descriptions/     # OEE concept description JSON exports
-└── docs/                     # Architecture diagrams and UI screenshots
-```
+<p align="center"><img src="docs/screenshots/live-demo-digital-nameplate.png" width="700" alt="Live BaSyX demo showing populated Digital Nameplate data"></p>
 
 ---
 
